@@ -1,6 +1,4 @@
-
 (function () {
-
   window.RMCDefaultChannel = location.href
     .replace(/\/|:|#|\?|\$|\^|%|\.|`|~|!|@|\[|\||]|\|*. /g, "")
     .split("\n")
