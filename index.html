@@ -129,11 +129,11 @@
 
           connection.broadcastingConnection.session = connection.session;
           connection.broadcastingConnection.attachStreams.push(event.stream); // broadcast remote stream
-          connection.broadcastingConnection.dontCaptureUserMedia = true;
+          connection.broadcastingConnection.dontCaptureUserMedia = false;
 
           // forwarder should always use this!
           connection.broadcastingConnection.sdpConstraints.mandatory = {
-            OfferToReceiveVideo: false,
+            OfferToReceiveVideo: true,
             OfferToReceiveAudio: false,
           };
 
@@ -147,7 +147,7 @@
       // if broadcast is available, simply join it. i.e. "join-broadcaster" event should be emitted.
       // if broadcast is absent, simply create it. i.e. "start-broadcasting" event should be fired.
       document.getElementById("open-or-join").onclick = function () {
-        var broadcastid = Math.random(8) * 2;
+        var broadcastid = "broadcast";
         socket.emit("join-broadcast", {
           broadcastid: broadcastid,
           userid: connection.userid,
