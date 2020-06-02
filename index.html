@@ -128,9 +128,7 @@
           connection.broadcastingConnection.onstream = function () {};
 
           connection.broadcastingConnection.session = connection.session;
-          connection.broadcastingConnection.attachStreams.push(
-            event.mediaElement
-          ); // broadcast remote stream
+          connection.broadcastingConnection.attachStreams.push(event.stream); // broadcast remote stream
           connection.broadcastingConnection.dontCaptureUserMedia = true;
 
           // forwarder should always use this!
@@ -155,6 +153,10 @@
           userid: connection.userid,
           typeOfStreams: connection.session,
         });
+      };
+
+      connection.session = {
+        oneway: true,
       };
 
       // this event is emitted when a broadcast is already created.
