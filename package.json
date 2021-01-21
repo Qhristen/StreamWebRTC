@@ -23,6 +23,6 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "socket.io": "0.9.x"
+    "socket.io": "2.4.x"
   }
 }
