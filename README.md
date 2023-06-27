@@ -6,25 +6,6 @@ Scalable WebRTC peer-to-peer broadcasting demo.
 
 This module simply initializes socket.io and configures it in a way that single broadcast can be relayed over unlimited users without any bandwidth/CPU usage issues. Everything happens peer-to-peer!
 
-## RTCMultiConnection v3 and Scalable Broadcast
-
-RTCMultiConnection v3 now naively supports scalable-broadcast:
-
-| DemoTitle        | TestLive           | ViewSource |
-| ------------- |-------------|-------------|
-| Scalable Audio/Video Broadcast | [Demo](https://rtcmulticonnection.herokuapp.com/demos/Scalable-Broadcast.html) | [Source](https://github.com/muaz-khan/RTCMultiConnection/tree/master/demos/Scalable-Broadcast.html) |
-| Scalable Screen Broadcast | [Demo](https://rtcmulticonnection.herokuapp.com/demos/Scalable-Screen-Broadcast.html) | [Source](https://github.com/muaz-khan/RTCMultiConnection/tree/master/demos/Scalable-Screen-Broadcast.html) |
-| Scalable Video Broadcast | [Demo](https://rtcmulticonnection.herokuapp.com/demos/Video-Scalable-Broadcast.html) | [Source](https://github.com/muaz-khan/RTCMultiConnection/tree/master/demos/Video-Scalable-Broadcast.html) |
-| Scalable File Sharing | [Demo](https://rtcmulticonnection.herokuapp.com/demos/Files-Scalable-Broadcast.html) | [Source](https://github.com/muaz-khan/RTCMultiConnection/tree/master/demos/Files-Scalable-Broadcast.html) |
-
-* https://github.com/muaz-khan/RTCMultiConnection#scalable-broadcasting
-
-## Demos
-
-> Note: These (below) are old demos. Above (RTCMultiConnection-v3) demos are preferred (and up-to-dated).
-
-1. [`index.html`](https://github.com/muaz-khan/WebRTC-Scalable-Broadcast/blob/master/index.html) - share video or screen or audio over unlimited users using p2p methods.
-2. [`share-files.html`](https://github.com/muaz-khan/WebRTC-Scalable-Broadcast/blob/master/share-files.html) - share files with unlimited users using p2p methods!
 
 ## Browsers Support:
 
@@ -99,19 +80,6 @@ cd ./node_modules/webrtc-scalable-broadcast/
 node ./server.js
 ```
 
-Or install using WGet:
-
-```sh
-mkdir webrtc-scalable-broadcast && cd webrtc-scalable-broadcast
-wget http://dl.webrtc-experiment.com/webrtc-scalable-broadcast.tar.gz
-tar -zxvf webrtc-scalable-broadcast.tar.gz
-ls -a
-node server.js
-```
-
-Or directly download the TAR/archive on windows:
-
-* http://dl.webrtc-experiment.com/webrtc-scalable-broadcast.tar.gz
 
 And now open: `http://localhost:8888` or `127.0.0.1:8888`.
 
@@ -127,14 +95,6 @@ node server.js
 ```
 
 ## How it works?
-
-Above image showing terminal logs explains it better.
-
-For more details, to understand how this broadcasting technique works:
-
-* https://github.com/muaz-khan/WebRTC-Experiment/issues/2
-
-![WebRTC Scalable Broadcast](https://sites.google.com/site/webrtcexperiments/WebRTC-attach-remote-stream.png)
 
 Assuming peers 1-to-10:
 
@@ -194,7 +154,3 @@ peer10 opens a "parallel" broadcasting peer named as "peer10-broadcaster"
 3. Peer50 gets remote stream from peer49
 
 and so on.
-
-## License
-
-[Scalable WebRTC Broadcasting Demo](https://github.com/muaz-khan/WebRTC-Scalable-Broadcast) is released under [MIT licence](https://www.webrtc-experiment.com/licence/) . Copyright (c) [Muaz Khan](http://www.MuazKhan.com/).
